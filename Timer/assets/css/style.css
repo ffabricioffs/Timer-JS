@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --text: #1f2937;
+  --accent: #3b82f6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid var(--border);
+  max-width: 360px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+#timer {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3rem;
+  margin: 20px 0;
+  transition: color 0.3s ease;
+}
+
+#timer.pausado {
+  color: var(--warning);
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 90px;
+}
+
+button.iniciar {
+  background-color: var(--success);
+}
+
+button.iniciar:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+button.pausar {
+  background-color: var(--warning);
+}
+
+button.pausar:hover {
+  background-color: #d97706;
+  transform: scale(1.05);
+}
+
+button.zerar {
+  background-color: var(--danger);
+}
+
+button.zerar:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
